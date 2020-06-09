@@ -2,11 +2,14 @@
 <html lang="es">
 
 <head>
+    <link rel="shortcut icon" href="miscelaneous/Total_Parts.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maxium-scale=1.0,minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/popup.css" type="text/css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/index.js" type="text/javascript"></script>
 
@@ -14,7 +17,7 @@
 
 <body>
     <div id="all">
-        <header>
+        <header class="header" id="myHeader">
             <img id="logo" src="miscelaneous/Total_Parts.png" alt="logo">
             <nav>
                 <ul class="nav_links">
@@ -22,9 +25,9 @@
                     <li><a class=".option" href="nosotros.html">¿Que somos?</a></li>
                 </ul>
             </nav>
-            <a href=""><button >Contactanos</button></a>
+            <button onclick="mostrarPopup()">Contactanos</button>
         </header>
-        <section class="galeria">
+        <section id="galeria" class="galeria">
         </section>
         <section id="body">
             <section id="scrolldown">
@@ -33,12 +36,136 @@
                     <</p>
             </section>
             <section id="seccion">
+                <h3 id="title">Todo Parts</h3>
+                <div id="subtitle">
+                    <div id="mision">
+                        <div class="title">
+                            <h1>Mision</h1>
+                        </div>
+                        <div class="content">
+                            <p>Ser el grupo empresarial líder por la lealtad de sus clientes, aplicación de tecnología, el crecimiento sostenido y la rentabilidad con base en la representación y comercialización de productos y servicios de reconocido prestigio
+                                en un ambiente caracterizado por la excelencia y compromiso de sus recursos humanos.</p>
+                        </div>
+                    </div>
+                    <div id="vision">
+                        <div class="title">
+                            <h1>Vision</h1>
+                        </div>
+                        <div class="content">
+                            <p>Un automóvil ya no es simplemente un medio de transporte que vincula a las personas con las personas; se ha convertido en un espacio vital que ocupa un lugar central en la vida de las personas. Como tal, la empresa Todo Parts
+                                busca convertirse en un socio de por vida en la rutina diaria de los clientes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content">
+
+                    <div id="cajaA">
+                        <div id="tituA" class="titulo">TRANSPARENCIA</div>
+                        <div id="conta">
+                            <p class="data">En Total Parts S.A nos encargamos de traer la mejor calidad de mano del proveedor oficial de las diferentes marcas disponibles en el rubro, ademas de que las piezas que tenemos cuentan con una garantía.</p>
+                        </div>
+                    </div>
+
+                    <div id="cajaB">
+                        <div id="tituB" class="titulo">CALIDAD</div>
+                        <div id="contb">
+                            <p class="data">En todo parts ofrecemos productos nuevos y de calidad, con el sello de confianza de las distintas distribuidoras oficiales con las que estamos en contacto, de manera que el cliente se sienta seguro de que lo que esta adquiriendo
+                                es bueno</p>
+                        </div>
+                    </div>
+                    <div id="cajaC">
+                        <div id="tituC" class="titulo">BUEN SERVICIO</div>
+                        <div id="contc">
+                            <p>Somos una empresa con mas de 10 años de experiencia en el rubro y nuestro principal objetivo es satisfacer al cliente con el trabajo que realizamos y el tiempo en el que lo realizamos.</p>
+                        </div>
+                    </div>
+
+                </div>
 
             </section>
+
         </section>
 
     </div>
+    <footer>
+        <div class="container-footer-all">
+            <div class="container-body">
+                <div class="column1">
+                    <h1>Mas informacion de la compañia</h1>
+                    <p>Esta compañia se dedica tanto a la venta de piezas de vehiculos como a la reparacion de vehiculos. </p>
+                </div>
+                <div class="column2">
+                    <h1>Redes Sociales</h1>
+                    <div class="row">
+                        <a href="#"><img src="miscelaneous/facebook.png"></a>
+                        <label>Siguenos en Facebook</label>
+                    </div>
+                    <div class="row">
+                        <a href="#"><img src="miscelaneous/instagram.png"></a>
+                        <label>Siguenos en Instagram</label>
+                    </div>
+                    <div class="row">
+                        <a href="#"><img src="miscelaneous/twitter.png"></a>
+                        <label>Siguenos en Twitter</label>
+                    </div>
+                </div>
+                <div class="column3">
+                    <h1>Contactos</h1>
+                    <div class="row2">
+                        <img src="miscelaneous/home.png">
+                        <label> Mcal. Estigarribia c/ San ignacio Asuncion, Paraguay.</label>
+                    </div>
+                    <div class="row2">
+                        <img src="miscelaneous/phone2.png">
+                        <label>+595981380134</label>
+                    </div>
+                    <div class="row2">
+                        <img class="correo" src="miscelaneous/correo2.png">
+                        <label>javierlopez9805@gmail.com</label>
+                    </div>
+                </div>
 
+            </div>
+
+        </div>
+        <div class="container-footer">
+            <div class="footer">
+                <div class="copyright">
+                    @2020 Todos los derechos reservados a <a href="">Javier Lopez</a>
+                </div>
+                <div class="information">
+                    <a href="">Informacion compañía</a>|<a href="">Privacidad</a>|<a href="">Terminos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Contact Box -->
+    <div>
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" onclick="ocultarPopup()">
+                    <div class="cerrar">X</div>
+                </a>
+                <h3>Contactanos</h3>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="Nombre" id="Nombre">
+                        <label for="correo">Correo</label>
+                        <input type="text" name="correo" id="correo">
+                        <label for="telefono">Telefono</label>
+                        <input type="text" name="telefono" id="telefono">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+                    </div>
+                    <input type="submit" class="btn-submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Box -->
 </body>
 
 </html>

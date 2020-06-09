@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+.mostrar-popup {
+    padding: 0px 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #5e7de3;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .7 ease all;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    justify-content: center;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    background: rgb(109, 85, 85);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .9);
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    z-index: 3;
+    position: absolute;
+}
+
+.popup .btn-cerrar-popup {
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #bbbbbb;
+    transition: .3s ease all;
+}
+
+.popup .btn-cerrar-popup:hover {
+    color: black;
+}
+
+.popup .btn-cerrar-popup .cerrar {
+    text-decoration: none;
+}
+
+.popup h3 {
+    font-size: 36px;
+    font-weight: 36px;
+    margin-bottom: 10px;
+    /* opacity: ; */
+}
+
+.popup form .contenedor-inputs input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #bbbbbb;
+}
+
+.popup form .btn-submit {
+    padding: 0px 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #5e7de3;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.popup form .btn-submit:hover {
+    background: rgba(94, 125, 227, .5);
+}
+
+.popup textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 150px;
+    line-height: 52px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #bbbbbb;
+    resize: none;
+}
